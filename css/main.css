@@ -38,6 +38,11 @@ ul, li {
   background-color: rgba(238, 225, 216, 0.45);
   padding-top: 50px;
 }
+.nav .nav_bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 10%;
+}
 .nav .nav_list .nav_btn {
   padding: 14px 0;
   text-align: center;

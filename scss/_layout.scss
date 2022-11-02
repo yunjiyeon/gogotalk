@@ -4,6 +4,11 @@
   background-color: $opacityBg;
   padding-top: 50px;
 
+  .nav_bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+  }
   .nav_list {
     .nav_btn{
       padding: 14px 0;
