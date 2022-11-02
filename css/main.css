@@ -41,7 +41,7 @@ ul, li {
 .nav .nav_bottom {
   width: 100%;
   position: absolute;
-  bottom: 10%;
+  bottom: 50px;
 }
 .nav .nav_list .nav_btn {
   padding: 14px 0;
