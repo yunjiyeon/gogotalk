@@ -6,9 +6,10 @@
     .preview_pic{
       img {
         @include set-box(50px, 50px, 16px);
-        background-color: $main-color;
+        background-color: #fff;
+        border: 1px solid $opacityBlack;
         margin-right: 16px;
-        opacity: 0.7;
+        opacity: 0.9;
         overflow: hidden;
         object-fit: cover;
       }
@@ -42,23 +43,48 @@
       color: $opacityBlack;
     }
   }
-}
-
-.bubble {
-  @include set-box(auto, 100%, 30px);
-  position: relative;
-  background-color: #fff;
-  box-shadow: 3px 3px 2px $bg-color;
-  padding: 12px 14px;
-  font-size: 0.8em;
-
-  &::before{
-    @include set-box(0px, 0px);
-    position: absolute; 
-    content: "";
-    top: 5px;
-    left: -2px;
-    border-bottom: 15px solid transparent;
-    border-right: 15px solid #fff;
+  .bubble {
+    @include set-box(auto, 100%, 30px);
+    position: relative;
+    background-color: #fff;
+    box-shadow: 3px 3px 2px $bg-color;
+    padding: 12px 14px;
+    font-size: 0.8em;
+  
+    &::before{
+      @include set-box(0px, 0px);
+      position: absolute; 
+      content: "";
+      top: 5px;
+      left: -2px;
+      border-bottom: 15px solid transparent;
+      border-right: 15px solid #fff;
+    }
+  }
+  &.my{
+    flex-direction: row-reverse;
+    
+    .bubble_wrap {
+      flex-direction: row-reverse;
+    }
+    .preview_pic{
+      display: none;
+    }
+    .preview_nick{
+      display: none;
+    }
+    .bubble{
+      background-color: $main-color;
+      color: #fff;
+      box-shadow: -3px 3px 2px $bg-color;
+      &::before{
+        left:auto;
+        right: -2px;
+        border-top:15px solid $main-color;
+        border-right:15px solid transparent;
+      }
+    }
   }
 }
+
+

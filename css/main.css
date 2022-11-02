@@ -86,9 +86,10 @@ ul, li {
   height: 50px;
   width: 50px;
   border-radius: 16px;
-  background-color: #ee8400;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   margin-right: 16px;
-  opacity: 0.7;
+  opacity: 0.9;
   overflow: hidden;
   object-fit: cover;
 }
@@ -117,8 +118,7 @@ ul, li {
   font-size: 0.7em;
   color: rgba(0, 0, 0, 0.2);
 }
-
-.bubble {
+.preview .bubble {
   height: auto;
   width: 100%;
   border-radius: 30px;
@@ -128,7 +128,7 @@ ul, li {
   padding: 12px 14px;
   font-size: 0.8em;
 }
-.bubble::before {
+.preview .bubble::before {
   height: 0px;
   width: 0px;
   border-radius: 0;
@@ -138,6 +138,29 @@ ul, li {
   left: -2px;
   border-bottom: 15px solid transparent;
   border-right: 15px solid #fff;
+}
+.preview.my {
+  flex-direction: row-reverse;
+}
+.preview.my .bubble_wrap {
+  flex-direction: row-reverse;
+}
+.preview.my .preview_pic {
+  display: none;
+}
+.preview.my .preview_nick {
+  display: none;
+}
+.preview.my .bubble {
+  background-color: #ee8400;
+  color: #fff;
+  box-shadow: -3px 3px 2px #eee1d8;
+}
+.preview.my .bubble::before {
+  left: auto;
+  right: -2px;
+  border-top: 15px solid #ee8400;
+  border-right: 15px solid transparent;
 }
 
 .login_container {
@@ -238,7 +261,7 @@ ul, li {
   align-items: center;
 }
 .chat_screen .chat_screen_bar .chat_nick {
-  font-size: 0.95em;
+  font-size: 0.9em;
   margin-top: 5px;
 }
 .chat_screen .chat_screen_bar .chat_num {
